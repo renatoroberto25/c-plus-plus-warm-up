@@ -1,0 +1,31 @@
+#include <iostream>
+// Inclua a biblioteca para manipulação de casas decimais, se necessário
+// #include <iomanip>
+// Use a função std para facilitar a escrita
+using namespace std;
+// --- Função para calcular Juros Simples ---
+// Parâmetros: P (Principal), T (Tempo), R (Taxa de Juros)
+// Retorna: O valor do juros simples
+float calculateSimpleInterest(float P, float T, float R) {
+    // Escreva a fórmula aqui
+    // simple_interest = (P * T * R) / 100
+    // Retorne o resultado
+    return 0; // Substitua este valor pelo resultado do cálculo
+}
+// --- Função Principal ---
+int main() {
+    // 1. Declare as variáveis para P, T e R
+    // Exemplo: float principal;
+    // 2. Peça ao usuário para inserir os valores de P, T e R
+    cout << "Digite o valor principal (P): ";
+    // Leia o valor do usuário e armazene na variável
+    cout << "Digite o tempo (T): ";
+    // Leia o valor do usuário e armazene na variável
+    cout << "Digite a taxa de juros (R): ";
+    // Leia o valor do usuário e armazene na variável
+    // 3. Chame a função 'calculateSimpleInterest' e armazene o resultado em uma variável
+    // Exemplo: float interest = calculateSimpleInterest(principal, time, rate);
+    // 4. Exiba o resultado para o usuário
+    cout << "O juros simples é: " << /* Variável com o resultado */ << endl;
+    return 0;
+}
