@@ -34,7 +34,8 @@ semana0-10-main
 semana0-11-main
 - [X] Calcular Área e Perímetro de um Retângulo
 semana0-12-main
-
+- [X] Calcula elementos em um vector que são estritamente menores que seus vizinhos adjacentes
+semana1-001-main
 ---
 
 ## 🎯 Nível 2: Fluxo de Controle (Decisões e Laços)

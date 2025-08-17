@@ -1,0 +1,30 @@
+Escreva um programa C++ que retorna os elementos em um vector que são estritamente menores que seus vizinhos adjacentes da esquerda e da direita 
+
+// Declaração de variáveis
+VETOR DE INTEIROS numeros(tamanho 10) // vetor para armazenar os 10 números
+INTEIRO i // contador para os laços
+
+// 1. Coleta os 10 valores inteiros do usuário
+PARA i DE 0 ATÉ 9 FAÇA
+    ESCREVER "Informe o ", (i + 1), ".o valor: "
+    LER numeros[i]
+FIM PARA
+
+// 2. Exibe o conteúdo completo do vetor para verificação
+ESCREVER "Conteúdo do vetor: "
+PARA i DE 0 ATÉ 9 FAÇA
+    ESCREVER numeros[i], " "
+FIM PARA
+ESCREVER NOVA_LINHA
+
+// 3. Processa o vetor para encontrar os elementos menores que seus vizinhos
+ESCREVER "Os elementos menores que seus vizinhos adjacentes são:"
+PARA i DE 1 ATÉ 8 FAÇA // Começa em 1 e termina em 8 para evitar o primeiro e o último elemento
+    // Verifica se o elemento atual é menor que o anterior E menor que o próximo
+    SE (numeros[i] < numeros[i-1] E numeros[i] < numeros[i+1]) ENTÃO
+        ESCREVER numeros[i], " " // Imprime o elemento se a condição for verdadeira
+    FIM SE
+FIM PARA
+ESCREVER NOVA_LINHA
+
+FIM
