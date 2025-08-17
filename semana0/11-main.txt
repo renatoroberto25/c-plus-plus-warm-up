@@ -1,30 +1,40 @@
-// Esqueleto para cálculo de Juros Compostos em C++
+// Declaração de variáveis
+REAL principal, taxa, tempo, montante, jurosCompostos
+CARACTERE tipoTaxa, tipoTempo
 
-#include <iostream>
-#include <cmath> // Para pow()
+INICIO
 
-int main() {
-    // Declarar variáveis
-    double principal, rate, time, amount, compoundInterest;
+    // Entrada de dados do usuário
+    ESCREVER "Digite o valor principal: "
+    LER principal
 
-    // Entrada do usuário
-    std::cout << "Digite o valor principal: ";
-    std::cin >> principal;
+    ESCREVER "A taxa é anual (a) ou mensal (m)? "
+    LER tipoTaxa
 
-    std::cout << "Digite o tempo (anos): ";
-    std::cin >> time;
+    ESCREVER "Digite a taxa de juros (%): "
+    LER taxa
 
-    std::cout << "Digite a taxa de juros (%): ";
-    std::cin >> rate;
+    ESCREVER "O tempo é em anos (a) ou meses (m)? "
+    LER tipoTempo
 
-    // Calcular o montante
-    amount = principal * pow((1 + rate / 100), time);
+    ESCREVER "Digite o tempo: "
+    LER tempo
 
-    // Calcular o juros composto
-    compoundInterest = amount - principal;
+    // Ajusta taxa e tempo para o cálculo correto, se necessário
+    SE (tipoTaxa == 'a' E tipoTempo == 'm') ENTÃO
+        taxa = taxa / 12
+        tempo = tempo / 12
+    SENÃO SE (tipoTaxa == 'm' E tipoTempo == 'a') ENTÃO
+        tempo = tempo * 12
+    FIM SE
 
-    // Exibir resultado
-    std::cout << "Juros Compostos = " << compoundInterest << std::endl;
+    // Cálculo do montante
+    montante = principal * ( (1 + taxa / 100) ^ tempo )
 
-    return 0;
-}
+    // Cálculo dos juros compostos
+    jurosCompostos = montante - principal
+
+    // Exibição do resultado
+    ESCREVER "Juros Compostos = ", jurosCompostos
+
+FIM
