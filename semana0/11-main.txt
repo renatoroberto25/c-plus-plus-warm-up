@@ -1,0 +1,30 @@
+// Esqueleto para cálculo de Juros Compostos em C++
+
+#include <iostream>
+#include <cmath> // Para pow()
+
+int main() {
+    // Declarar variáveis
+    double principal, rate, time, amount, compoundInterest;
+
+    // Entrada do usuário
+    std::cout << "Digite o valor principal: ";
+    std::cin >> principal;
+
+    std::cout << "Digite o tempo (anos): ";
+    std::cin >> time;
+
+    std::cout << "Digite a taxa de juros (%): ";
+    std::cin >> rate;
+
+    // Calcular o montante
+    amount = principal * pow((1 + rate / 100), time);
+
+    // Calcular o juros composto
+    compoundInterest = amount - principal;
+
+    // Exibir resultado
+    std::cout << "Juros Compostos = " << compoundInterest << std::endl;
+
+    return 0;
+}
