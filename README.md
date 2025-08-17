@@ -30,8 +30,10 @@ semana0-08-main
 semana0-09-main
 - [X] Calcular Juros Simples
 semana0-10-main
-- [ ] Calcular Juros Compostos
-- [ ] Calcular Área e Perímetro de um Retângulo
+- [X] Calcular Juros Compostos
+semana0-11-main
+- [X] Calcular Área e Perímetro de um Retângulo
+semana0-12-main
 
 ---
 
